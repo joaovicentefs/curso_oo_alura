@@ -20,11 +20,18 @@ class Conta:
         self.saca(valor)
         destino.deposita(valor)
 
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-    def set_limite(self, novo_limite):
-        self.__limite = novo_limite
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
